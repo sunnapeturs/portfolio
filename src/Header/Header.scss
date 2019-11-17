@@ -1,0 +1,11 @@
+@import '../App.scss';
+
+.navbar{
+    height: 80px;
+    width: 90%;
+    margin: 0 auto;
+    @include flexbox(row, space-between, center);
+    a{
+    text-decoration: none;
+    }
+}

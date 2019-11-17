@@ -1,0 +1,17 @@
+
+// **** Text style ****
+@mixin text-style($font-size, $font-color, $text-align, $font-weight, $line-height) {
+    font-size: $font-size;
+    color: $font-color;
+    text-align: $text-align;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    @content;
+}
+// **** Flexbox ****
+@mixin flexbox($dir :null, $jst: null, $algn: null) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jst;
+    align-items: $algn;
+}
