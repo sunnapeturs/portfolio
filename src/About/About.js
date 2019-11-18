@@ -26,7 +26,7 @@ const aboutPage = ({ prismicCtx }) => {
               alt={content.data.profile_img.alt}
             />
           </div>
-          <div className="text">
+          <div className="project-description">
             <p>{PrismicReact.RichText.asText(content.data.about_txt)}</p>
           </div>
         </div>

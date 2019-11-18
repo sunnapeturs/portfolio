@@ -13,7 +13,12 @@
     text-decoration: none;
   }
   .thumbnail {
+    height: 464px;
+    width: 624.37;
     width: 100%;
     object-fit: cover;
+  }
+  .thumbnail-title {
+    margin-top: 16px;
   }
 }

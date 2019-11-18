@@ -15,7 +15,6 @@ const RelatedProject = () => {
       });
     });
   }, []);
-  console.log(project.slice(1));
   return (
     <div className="r-project-cards">
       {project &&
@@ -24,9 +23,9 @@ const RelatedProject = () => {
             <div key={index} className="r-project-card">
               <Link to={"/" + project.uid}>
                 <img
-                  src="https://static.wixstatic.com/media/749b71_82e2110ef8a5491e9583735a26e1e698~mv2.jpg/v1/fill/w_1408,h_1002,al_c,q_90/749b71_82e2110ef8a5491e9583735a26e1e698~mv2.webp"
-                  className="thumbnail"
+                  src={project.data.thumbnail.url}
                   alt="thumbnail"
+                  className="thumbnail"
                 ></img>
                 <h4 className="thumbnail-title">
                   {PrismicReact.RichText.render(project.data.project_title)}

@@ -23,7 +23,7 @@ const ProjectPage = ({ match, prismicCtx }) => {
       {project && (
         <div>
           <div className="project-banner">
-            <img src={project.data.project_banner.url} />
+            <img src={project.data.project_banner.url} alt="banner" />
           </div>
           <div className="project-content">
             <span className="project-title">
@@ -41,7 +41,10 @@ const ProjectPage = ({ match, prismicCtx }) => {
           </div>
         </div>
       )}
-      <RelatedProject />
+      <div class="related-projects-section">
+        <span className="thumbnail-title">Related projects:</span>
+        <RelatedProject />
+      </div>
       <Footer />
     </div>
   );

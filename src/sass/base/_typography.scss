@@ -20,10 +20,10 @@ body {
   @include text-style(1.5rem, $primary-color, center, 800, 2rem);
 }
 .project-title {
-  @include text-style(1.5rem, $primary-color, left, 500, 2rem);
+  @include text-style(1.5rem, $primary-color, left, 800, 2rem);
 }
 .project-type {
-  @include text-style(1.5rem, $primary-color, left, 500, 2rem);
+  @include text-style(1.5rem, $primary-color, right, 800, 2rem);
 }
 .project-description {
   @include text-style(1.5rem, $primary-color, left, 500, 2rem);

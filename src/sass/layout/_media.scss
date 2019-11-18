@@ -22,4 +22,7 @@
   .h1 {
     @include text-style(1.5rem, $primary-color, center, 500, 5rem);
   }
+  .nav-font-style {
+    @include text-style(1rem, $primary-color, center, 800, 2rem);
+  }
 }

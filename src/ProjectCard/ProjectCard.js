@@ -23,10 +23,10 @@ const ProjectCard = () => {
             <div key={index} className="project-card">
               <Link to={"/" + project.uid}>
                 <img
-                  src="https://static.wixstatic.com/media/749b71_82e2110ef8a5491e9583735a26e1e698~mv2.jpg/v1/fill/w_1408,h_1002,al_c,q_90/749b71_82e2110ef8a5491e9583735a26e1e698~mv2.webp"
-                  className="thumbnail"
+                  src={project.data.thumbnail.url}
                   alt="thumbnail"
-                ></img>
+                  className="thumbnail"
+                />
                 <h4 className="thumbnail-title">
                   {PrismicReact.RichText.render(project.data.project_title)}
                 </h4>

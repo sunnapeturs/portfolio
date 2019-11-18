@@ -4,10 +4,6 @@
   height: calc(100vh - 20rem);
   @include flexbox(row, center, center);
 }
-// .card-container {
-//   @include flexbox(row, center, center);
-// }
-
 .heading-primary {
   backface-visibility: hidden;
   animation-name: moveInLeft;
