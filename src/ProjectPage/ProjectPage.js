@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import PrismicReact from "prismic-reactjs";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import ImageGallery from "../ImageGallery";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import RelatedProject from "../RelatedProject/RelatedProject";
+import "./ProjectPage.scss";
 
 const ProjectPage = ({ match, prismicCtx }) => {
   const [project, setProject] = useState();
@@ -19,20 +21,27 @@ const ProjectPage = ({ match, prismicCtx }) => {
     <div>
       <Header />
       {project && (
-        <div className="project-container">
-          <img src={project.data.project_banner.url} />
-          <h4 className="thumbnail-title">
-            {PrismicReact.RichText.render(project.data.project_title)}
-          </h4>
-          <span className="">
-            {PrismicReact.RichText.render(project.data.project_type)}
-          </span>
-          <p>
-            {PrismicReact.RichText.render(project.data.project_description)}
-          </p>
-          <ImageGallery gallery={project.data.project_images} />
+        <div>
+          <div className="project-banner">
+            <img src={project.data.project_banner.url} />
+          </div>
+          <div className="project-content">
+            <span className="project-title">
+              {PrismicReact.RichText.render(project.data.project_title)}
+            </span>
+            <div className="project-content-aligned">
+              <p className="project-description">
+                {PrismicReact.RichText.render(project.data.project_description)}
+              </p>
+              <span className="project-type">
+                {PrismicReact.RichText.render(project.data.project_type)}
+              </span>
+            </div>
+            <ImageGallery gallery={project.data.project_images} />
+          </div>
         </div>
       )}
+      <RelatedProject />
       <Footer />
     </div>
   );

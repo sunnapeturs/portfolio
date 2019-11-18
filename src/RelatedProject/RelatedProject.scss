@@ -1,0 +1,14 @@
+@import "../App.scss";
+
+.r-project-cards {
+  @include flexbox(row, center, center);
+  width: 90%;
+  margin: 0 auto;
+}
+.r-project-card {
+  width: 30%;
+  padding: 1rem;
+  .thumbnail {
+    width: 100%;
+  }
+}

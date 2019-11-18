@@ -1,0 +1,29 @@
+@import "../App.scss";
+
+.project-banner {
+  width: 90%;
+  height: 480px;
+  margin: 0 auto;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.project-content {
+  width: 70%;
+  padding-top: 88px;
+  margin: 0 auto;
+}
+.project-content-aligned {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  @include flexbox(row, space-between, center);
+  .project-type {
+    width: 30%;
+  }
+  .project-description {
+    width: 70%;
+  }
+}

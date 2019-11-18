@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Prismic from "prismic-javascript";
 import PrismicReact from "prismic-reactjs";
-import "./ProjectCard.scss";
+import "./RelatedProject.scss";
 
-const ProjectCard = () => {
+const RelatedProject = () => {
   const [project, setProject] = useState([]);
 
   useEffect(() => {
@@ -15,12 +15,13 @@ const ProjectCard = () => {
       });
     });
   }, []);
+  console.log(project.slice(1));
   return (
-    <div className="project-cards">
-      {project.length &&
-        project.map((project, index) => {
+    <div className="r-project-cards">
+      {project &&
+        project.slice(0, 3).map((project, index) => {
           return (
-            <div key={index} className="project-card">
+            <div key={index} className="r-project-card">
               <Link to={"/" + project.uid}>
                 <img
                   src="https://static.wixstatic.com/media/749b71_82e2110ef8a5491e9583735a26e1e698~mv2.jpg/v1/fill/w_1408,h_1002,al_c,q_90/749b71_82e2110ef8a5491e9583735a26e1e698~mv2.webp"
@@ -38,4 +39,4 @@ const ProjectCard = () => {
   );
 };
 
-export default ProjectCard;
+export default RelatedProject;

@@ -1,0 +1,25 @@
+@media only screen and (max-width: 1040px) {
+  //Front page
+
+  //Project card page
+  .project-cards {
+    @include flexbox(column, center, center);
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project-card {
+    @include flexbox(column, center, center);
+    width: 100%;
+    padding: 0;
+    margin-bottom: 24px;
+    .thumbnail {
+      @include flexbox(column, center, center);
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .h1 {
+    @include text-style(1.5rem, $primary-color, center, 500, 5rem);
+  }
+}

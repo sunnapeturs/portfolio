@@ -1,13 +1,15 @@
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
-
-body{
-    font-family: 'Inter';
+body {
+  font-family: "Inter";
 }
-
 .h1 {
   @include text-style(3rem, $primary-color, center, 500, 5rem);
 }
@@ -16,4 +18,13 @@ body{
 }
 .thumbnail-title {
   @include text-style(1.5rem, $primary-color, center, 800, 2rem);
+}
+.project-title {
+  @include text-style(1.5rem, $primary-color, left, 500, 2rem);
+}
+.project-type {
+  @include text-style(1.5rem, $primary-color, left, 500, 2rem);
+}
+.project-description {
+  @include text-style(1.5rem, $primary-color, left, 500, 2rem);
 }

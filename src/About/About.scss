@@ -1,0 +1,17 @@
+@import "../App.scss";
+
+.about-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+  @include flexbox(column, space-around, center);
+  .image {
+    width: 50%;
+    img {
+      width: 439px;
+    }
+  }
+  .text {
+    width: 70%;
+  }
+}

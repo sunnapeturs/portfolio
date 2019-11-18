@@ -1,0 +1,10 @@
+.project-image {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 80px;
+  }
+}
